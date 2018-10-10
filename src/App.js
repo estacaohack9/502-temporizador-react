@@ -1,5 +1,6 @@
 import React from 'react';
 import AppStyle from './AppStyle';
+import Relogio from './Componentes/Relogio/Relogio';
 
 class App extends React.Component {
   render(){
@@ -7,7 +8,7 @@ class App extends React.Component {
       <div style={AppStyle.divDeFora}>
         <h1 style={AppStyle.titulo}>Temporizador React</h1>
         <div>
-          <div style={AppStyle.relogio}>00:00</div>
+          <Relogio />
           <div style={AppStyle.botoes}>
             <div>
               <button style={AppStyle.botao}>+</button>

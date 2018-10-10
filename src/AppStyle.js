@@ -14,9 +14,6 @@ const AppStyle = {
     flexDirection: 'column',
     textAlign: 'center'
   },
-  relogio:{
-    fontSize: '60pt',
-  },
   botao:{
     width: 100,
     height: 100,
