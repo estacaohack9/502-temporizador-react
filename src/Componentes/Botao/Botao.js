@@ -4,7 +4,7 @@ import BotaoStyle from './BotaoStyle';
 class Botao extends React.Component {
   render(){
     return (
-      <button style={BotaoStyle.botao}>{this.props.conteudo || "Botão"}</button>
+      <button onClick={this.props.clique} style={BotaoStyle.botao}>{this.props.conteudo || "Botão"}</button>
     );
   }
 }

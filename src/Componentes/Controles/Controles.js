@@ -7,12 +7,12 @@ class Controles extends React.Component {
     return (
       <div style={ControlesStyle.controles}>
         <div>
-          <Botao conteudo="-"/>
-          <Botao conteudo="+"/>
+          <Botao clique={this.props.menos} conteudo="-"/>
+          <Botao clique={this.props.mais} conteudo="+"/>
         </div>
         <div>
           <Botao conteudo="Iniciar"/>
-          <Botao conteudo="Zerar"/>
+          <Botao clique={this.props.zerar} conteudo="Zerar"/>
           <Botao conteudo="Registrar"/>
         </div>
       </div>

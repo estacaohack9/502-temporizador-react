@@ -7,7 +7,8 @@ const BotaoStyle = {
     color: 'white',
     backgroundColor: 'red',
     fontSize: '1.4em',
-    margin: '0 10px'
+    margin: '0 10px',
+    cursor: 'pointer'
   }
 }
 
