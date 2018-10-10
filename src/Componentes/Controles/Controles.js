@@ -11,7 +11,7 @@ class Controles extends React.Component {
           <Botao clique={this.props.mais} conteudo="+"/>
         </div>
         <div>
-          <Botao conteudo="Iniciar"/>
+          <Botao clique={this.props.iniciar} conteudo="Iniciar"/>
           <Botao clique={this.props.zerar} conteudo="Zerar"/>
           <Botao conteudo="Registrar"/>
         </div>
