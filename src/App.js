@@ -9,7 +9,8 @@ class App extends React.Component {
     super(props);
     this.state = {
       minutos: 0,
-      segundos: 0
+      segundos: 0,
+      parado: true
     };
     this.intervalo = 0;
   }
@@ -37,6 +38,9 @@ class App extends React.Component {
 
   parar = () => {
     clearInterval(this.intervalo);
+    this.setState({
+      parado: true
+    });
   }
 
   iniciar = () => {
@@ -56,16 +60,27 @@ class App extends React.Component {
         segundos: segundosAtual,
         minutos: minutosAtual
       });
-    }, 1000)
+    }, 1000);
+    this.setState({
+      parado: false
+    });
   }
 
   render(){
+    const funcoes = {
+      iniciar: this.iniciar,
+      parar: this.parar,
+      mais: this.mais,
+      menos: this.menos,
+      zerar: this.zerar
+    }
+
     return (
       <div style={AppStyle.divDeFora}>
         <h1 style={AppStyle.titulo}>Temporizador React</h1>
         <div>
           <Relogio minutos={this.state.minutos} segundos={this.state.segundos}/>
-          <Controles iniciar={this.iniciar} zerar={this.zerar} mais={this.mais} menos={this.menos}/>
+          <Controles parado={this.state.parado} funcoes={funcoes}/>
         </div>
         <Registros />
       </div>
