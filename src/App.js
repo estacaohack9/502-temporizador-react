@@ -2,6 +2,7 @@ import React from 'react';
 import AppStyle from './AppStyle';
 import Relogio from './Componentes/Relogio/Relogio';
 import Controles from './Componentes/Controles/Controles';
+import Registros from './Componentes/Registros/Registros';
 
 class App extends React.Component {
   render(){
@@ -12,6 +13,7 @@ class App extends React.Component {
           <Relogio />
           <Controles />
         </div>
+        <Registros />
       </div>
     );
   }

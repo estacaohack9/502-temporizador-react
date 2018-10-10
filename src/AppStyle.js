@@ -6,10 +6,8 @@ const AppStyle = {
     margin: 0
   },
   divDeFora:{
-    height: '60vh',
     width: '100vw',
     display: 'flex',
-    justifyContent: 'space-evenly',
     alignItems: 'center',
     flexDirection: 'column',
     textAlign: 'center'
