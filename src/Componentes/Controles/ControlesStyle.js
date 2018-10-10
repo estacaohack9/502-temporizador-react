@@ -1,0 +1,17 @@
+const ControlesStyle = {
+  botao:{
+    width: 100,
+    height: 100,
+    borderRadius: '50%',
+    border: '1px dotted black',
+    color: 'white',
+    backgroundColor: 'red',
+    fontSize: '1.4em',
+    margin: '0 10px'
+  },
+  controles:{
+    marginTop: 50
+  }
+};
+
+export default ControlesStyle;

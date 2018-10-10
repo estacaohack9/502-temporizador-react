@@ -1,6 +1,7 @@
 import React from 'react';
 import AppStyle from './AppStyle';
 import Relogio from './Componentes/Relogio/Relogio';
+import Controles from './Componentes/Controles/Controles';
 
 class App extends React.Component {
   render(){
@@ -9,17 +10,7 @@ class App extends React.Component {
         <h1 style={AppStyle.titulo}>Temporizador React</h1>
         <div>
           <Relogio />
-          <div style={AppStyle.botoes}>
-            <div>
-              <button style={AppStyle.botao}>+</button>
-              <button style={AppStyle.botao}>-</button>
-            </div>
-            <div>
-              <button style={AppStyle.botao}>Iniciar</button>
-              <button style={AppStyle.botao}>Zerar</button>
-              <button style={AppStyle.botao}>Registrar</button>
-            </div>
-          </div>
+          <Controles />
         </div>
       </div>
     );
