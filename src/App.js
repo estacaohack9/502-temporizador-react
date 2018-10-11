@@ -90,6 +90,24 @@ class App extends React.Component {
     });
   }
 
+
+
+  // componentDidMount(){
+  //   fetch('https://www.themealdb.com/api/json/v1/1/search.php?s=Potato').then(
+  //     resposta => resposta.json()
+  //   ).then(
+  //     dados => {
+  //       let lista = []
+  //       for (let meal of dados.meals){
+  //         lista.push(meal.strMeal);
+  //       }
+  //       this.setState({
+  //         registros: lista
+  //       });
+  //     }
+  //   ).catch(erro => console.log(`ERRO: ${erro}`));
+  // }
+
   render(){
     const funcoes = {
       iniciar: this.iniciar,
