@@ -7,8 +7,11 @@ class Registros extends React.Component {
       <div>
         <h2>Registros de tempo:</h2>
         <div>
-          <p style={RegistrosStyle.tempos}>00:00</p>
-          <p style={RegistrosStyle.tempos}>00:00</p>
+          {this.props.tempos.map((item, indice) => {
+            return(
+              <p key={indice} style={RegistrosStyle.tempos}>{item}</p>
+            );
+          })}
         </div>
       </div>
     );

@@ -10,9 +10,32 @@ class App extends React.Component {
     this.state = {
       minutos: 0,
       segundos: 0,
-      parado: true
+      parado: true,
+      registros: []
     };
     this.intervalo = 0;
+  }
+
+  registrar = () => {
+    if(this.state.minutos || this.state.segundos){
+      let minutos = this.state.minutos;
+      let segundos = this.state.segundos;
+
+      if(this.state.minutos < 10){
+        minutos = '0' + minutos;
+      }
+
+      if(this.state.segundos < 10){
+        segundos = '0' + segundos;
+      }
+
+      let novosRegistros = this.state.registros;
+      novosRegistros.push(`${minutos}:${segundos}`);
+
+      this.setState({
+        registros: novosRegistros
+      });
+    }
   }
 
   mais = () => {
@@ -32,7 +55,8 @@ class App extends React.Component {
   zerar = () => {
     this.setState({
       minutos: 0,
-      segundos:0
+      segundos:0,
+      registros: []
     });
   }
 
@@ -45,7 +69,7 @@ class App extends React.Component {
 
   iniciar = () => {
     this.intervalo = setInterval(()=>{
-      if(this.state.minutos === 0 && this.state.segundos === 0){
+      if(!this.state.minutos && !this.state.segundos){
         this.parar();
         return;
       }
@@ -72,7 +96,8 @@ class App extends React.Component {
       parar: this.parar,
       mais: this.mais,
       menos: this.menos,
-      zerar: this.zerar
+      zerar: this.zerar,
+      registrar: this.registrar
     }
 
     return (
@@ -82,7 +107,7 @@ class App extends React.Component {
           <Relogio minutos={this.state.minutos} segundos={this.state.segundos}/>
           <Controles parado={this.state.parado} funcoes={funcoes}/>
         </div>
-        <Registros />
+        <Registros tempos={this.state.registros}/>
       </div>
     );
   }

@@ -13,7 +13,7 @@ class Controles extends React.Component {
         <div>
           <Botao clique={this.props.parado ? this.props.funcoes.iniciar : this.props.funcoes.parar} conteudo={this.props.parado ? "Iniciar" : "Parar"}/>
           <Botao clique={this.props.funcoes.zerar} conteudo="Zerar"/>
-          <Botao conteudo="Registrar"/>
+          <Botao clique={this.props.funcoes.registrar} conteudo="Registrar"/>
         </div>
       </div>
     );
